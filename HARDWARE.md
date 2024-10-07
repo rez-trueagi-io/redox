@@ -5,24 +5,9 @@ This document tracks the current hardware compatibility of Redox.
 - [Status](#status)
 - [General](#general)
 - [Template](#template)
-- [x86-64](#x86-64)
-    - [System76](#system76)
-    - [Dell](#dell)
-    - [HP](#hp)
-    - [ASUS](#asus)
-    - [Lenovo](#lenovo)
-    - [Toshiba](#toshiba)
-    - [Framework](#framework)
-    - [Custom](#custom)
-- [i686](#i686)
-    - [Dell](#dell-1)
-    - [ASUS](#asus-1)
-    - [Lenovo](#lenovo-1)
-    - [Toshiba](#toshiba-1)
-    - [Panasonic](#panasonic)
-    - [Custom](#custom-1)
-- [ARM64](#arm64)
-    - [Custom](#custom-2)
+- [Recommended](#recommended)
+- [Booting](#booting)
+- [Broken](#broken)
 
 ## Status
 
@@ -42,18 +27,29 @@ This section cover things to consider.
 
 ## Template
 
-You will use this template to insert your computer.
-
-- **Computer model**
+You will use this template to insert your computer on the table.
 
 ```
-Status - (Broken, Booting or Recommended)
-Redox version - 0.0.0
-Variant - (server-minimal, desktop-minimal, server, desktop, demo, dev or customized)
-Image date - day-month-year
-
-- Additional details goes here as items
+|  |  |  |  |  |  |  |
 ```
+
+## Recommended
+
+| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** |
+|-----------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|
+|  |  |  |  |  |  |  |
+
+## Booting
+
+| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** |
+|-----------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|
+|  |  |  |  |  |  |  |
+
+## Broken
+
+| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** |
+|-----------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|
+|  |  |  |  |  |  |  |
 
 ## x86-64
 
