@@ -30,82 +30,50 @@ This section cover things to consider.
 You will use this template to insert your computer on the table.
 
 ```
-|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
 ```
 
 ## Recommended
 
-| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** |
-|-----------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|
-|  |  |  |  |  |  |  |
+| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** | **Report** |
+|------------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|------------|
+| System76 | Galago Pro (galp5) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop |
+| System76 | Lemur Pro (lemp9) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
 
 ## Booting
 
-| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** |
-|-----------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|
-|  |  |  |  |  |  |  |
+| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** | **Report** |
+|------------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|------------|
+| System76 | Oryx Pro (oryp10) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop, No touchpad support, though it should be working |
+| System76 | Pangolin (pang12) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop, No touchpad support, requires I2C HID |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
 
 ## Broken
 
-| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** |
-|-----------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|
-|  |  |  |  |  |  |  |
+| **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** | **Report** |
+|------------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|------------|
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
 
 ## x86-64
-
-Computers using a 64 bits Intel/AMD CPU.
-
-### System76
-
-- **System76 Galago Pro (galp5)**
-
-```
-Status - Recommended
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using UEFI
-- Boots to desktop
-```
-
-- **System76 Lemur Pro (lemp9)**
-
-```
-Status - Recommended
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using UEFI
-- Boots to desktop
-```
-
-- **System76 Oryx Pro (oryp10)**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using UEFI
-- Boots to desktop
-- No touchpad support, though it should be working
-```
-
-- **System76 Pangolin (pang12)**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using UEFI
-- Boots to desktop
-- No touchpad support, requires I2C HID
-```
 
 ### Dell
 
