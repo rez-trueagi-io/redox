@@ -2,12 +2,28 @@
 
 This document tracks the current hardware compatibility of Redox.
 
+- [Why hardware reports are needed?](#why-hardware-reports-are-needed)
+- [What if my computer is customized?](#what-if-my-computer-is-customized)
 - [Status](#status)
 - [General](#general)
 - [Template](#template)
 - [Recommended](#recommended)
 - [Booting](#booting)
 - [Broken](#broken)
+
+## Why hardware reports are needed?
+
+Each computer model have different hardware interface/firmware implementations and devices, which can cause the following problems:
+
+- Boot bugs
+- Lack of device support
+- Performance degradation
+
+These reports helps us to fix the problems above.
+
+## What if my computer is customized?
+
+You can use the "Custom" word on the "Brand" and "Model" fields, we also recommend to add your `pciutils` log on [this](https://gitlab.redox-os.org/redox-os/drivers/-/blob/master/COMMUNITY-HW.md?ref_type=heads) document to help us with probable porting.
 
 ## Status
 
