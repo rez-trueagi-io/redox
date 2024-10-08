@@ -37,9 +37,9 @@ You will use this template to insert your computer on the table.
 
 | **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** | **Report** |
 |------------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|------------|
-| System76 | Galago Pro (galp5) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop |
-| System76 | Lemur Pro (lemp9) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop |
-|  |  |  |  |  |  |  |  |
+| System76 | Galago Pro (galp5) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to Orbital |
+| System76 | Lemur Pro (lemp9) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to Orbital |
+| Lenovo | IdeaPad Y510P | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS, UEFI | Boots to Orbital |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
@@ -51,11 +51,13 @@ You will use this template to insert your computer on the table.
 
 | **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** | **Report** |
 |------------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|------------|
-| System76 | Oryx Pro (oryp10) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop, No touchpad support, though it should be working |
-| System76 | Pangolin (pang12) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to desktop, No touchpad support, requires I2C HID |
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
+| System76 | Oryx Pro (oryp10) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to Orbital, No touchpad support, though it should be working |
+| System76 | Pangolin (pang12) | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to Orbital, No touchpad support, requires I2C HID |
+| Dell | XPS 13 (9350) | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS, UEFI | Boots to Orbital, NVMe driver livelocks |
+| HP | Dev One | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to Orbital, No touchpad support, requires I2C HID |
+| ASUS | X554L | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS | Boots to Orbital, No audio, HDA driver cannot find output pins |
+| ASUS | ROG g55vw | 0.8.0 | 11-11-2023 | desktop | x86-64 | BIOS | Boots to Orbital, UEFI panic in SETUP |
+| Toshiba | Satellite L500 | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS | Boots to Orbital, No ethernet driver, Correct video mode not offered (firmware issue) |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
@@ -64,155 +66,14 @@ You will use this template to insert your computer on the table.
 
 | **Vendor** | **Model** | **Redox Version** | **Image Date** | **Variant** | **CPU Architecture** | **Motherboard Firmware** | **Report** |
 |------------|-----------|-------------------|----------------|-------------|----------------------|--------------------------|------------|
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |
+| HP | EliteBook 2570p | 0.8.0 | 23-11-2022 | demo | x86-64 | BIOS (CSM mode?) | Gets to resolution selection, Fails assert in `src/os/bios/mod.rs:77` after selecting resolution |
+| BEELINK | U59 | 0.8.0 | 30-05-2024 | server | x86-64 | Unknown | Aborts after panic in xhcid |
+| ASUS | PN41 | 0.8.0 | 30-05-2024 | server | x86-64 | Unknown | Aborts after panic in xhcid |
+| Lenovo | G570 | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS | Bootloader panics in `alloc_zeroed_page_aligned`, Correct video mode not offered (firmware issue) |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 
 ## x86-64
-
-### Dell
-
-- **Dell XPS 13 (9350)**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using both BIOS and UEFI
-- Boots to desktop
-- NVMe driver livelocks
-```
-
-### HP
-
-- **HP Dev One**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using UEFI
-- Boots to desktop
-- No touchpad support, requires I2C HID
-```
-
-- **HP EliteBook 2570p**
-
-```
-Status - Broken
-Redox version - 0.8.0
-Variant - demo
-Image date - 2022-11-23
-
-- UEFI Hybrid & Native boot don't work
-- Booted using 'legacy'
-- Gets to resolution selection  
-- Fails assert in `src/os/bios/mod.rs:77` after selecting resolution
-```
-
-### BEELINK
-
-- **BEELINK U59**
-
-```
-Status - Broken
-Redox version - 0.8.x 
-Variant - server
-Image date - 30-05-2024
-
-- Aborts after panic in xhcid
-```
-
-### ASUS
-
-- **ASUS PN41**
-
-```
-Status - Broken
-Redox version - 0.8.x 
-Variant - server
-Image date - 30-05-2024
-
-- Aborts after panic in xhcid
-```
-
-- **ASUS X554L**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using BIOS
-- Boots to desktop
-- No audio, HDA driver cannot find output pins
-```
-
-- **ASUS ROG g55vw**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2023
-
-- Booted using BIOS
-- Boots to desktop
-- UEFI panic in SETUP
-```
-
-### Lenovo
-
-- **Lenovo IdeaPad Y510P**
-
-```
-Status - Recommended
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using both BIOS and UEFI
-- Boots to desktop
-```
-
-- **Lenovo G570**
-
-```
-Status - Broken
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using BIOS
-- Correct video mode not offered, this is a firmware issue
-- Bootloader panics in alloc_zeroed_page_aligned
-```
-
-### Toshiba
-
-- **Toshiba Satellite L500**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using BIOS
-- Correct video mode not offered, this is a firmware issue
-- Boots to desktop
-- No ethernet driver
-```
 
 ### Framework
 
