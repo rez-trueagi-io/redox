@@ -73,7 +73,10 @@ You will use this template to insert your computer on the table.
 | HP | Dev One | 0.8.0 | 11-11-2022 | desktop | x86-64 | UEFI | Boots to Orbital, No touchpad support, requires I2C HID |
 | ASUS | X554L | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS | Boots to Orbital, No audio, HDA driver cannot find output pins |
 | ASUS | ROG g55vw | 0.8.0 | 11-11-2023 | desktop | x86-64 | BIOS | Boots to Orbital, UEFI panic in SETUP |
+| ASUS | PRIME B350M-E (custom) | 0.9.0 | 20-09-2024 | desktop | x86-64 | UEFI | Partial support for the PS/2 keyboard, PS/2 mouse is broken |
 | Toshiba | Satellite L500 | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS | Boots to Orbital, No ethernet driver, Correct video mode not offered (firmware issue) |
+| Dell | XPS 13 (9350) | 0.8.0 | 11-11-2022 | desktop | i686 | BIOS | Boots to Orbital, NVMe driver livelocks |
+| ASUS | Eee PC 900 | 0.8.0 | 11-11-2022 | desktop | i686 | BIOS | Boots to Orbital, No ethernet driver, Correct video mode not offered (firmware issue) |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
@@ -86,91 +89,15 @@ You will use this template to insert your computer on the table.
 | BEELINK | U59 | 0.8.0 | 30-05-2024 | server | x86-64 | Unknown | Aborts after panic in xhcid |
 | ASUS | PN41 | 0.8.0 | 30-05-2024 | server | x86-64 | Unknown | Aborts after panic in xhcid |
 | Lenovo | G570 | 0.8.0 | 11-11-2022 | desktop | x86-64 | BIOS | Bootloader panics in `alloc_zeroed_page_aligned`, Correct video mode not offered (firmware issue) |
+| Lenovo | IdeaPad Y510P | 0.8.0 | 11-11-2022 | desktop | i686 | BIOS | Panics on phys_to_virt overflow, probably having invalid mappings for 32-bit |
+| Framework | Laptop 16 (AMD Ryzen 7040 Series) | 0.9.0 | 07-09-2024 | server, demo | x86-64 | UEFI | Black screen and unresponsive after the bootloader and resolution selection |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
-
-## x86-64
-
-### Framework
-
-- **Framework Laptop 16 (AMD Ryzen 7040 Series)**
-
-```
-Status - Broken
-Redox version - 0.9.0
-Variant - demo, server
-Image date - 07-09-2024
-
-- Bootloader loaded using UEFI
-- Black screen and unresponsive after the bootloader and resolution selection
-```
-
-### Custom
-
-If you have a customized computer, put it here.
-
-- **ASUS PRIME B350M-E**
-
-```
-Status - Booting
-Redox version - 0.9.0
-Variant - desktop
-Image date - 20-09-2024
-
-- UEFI Firmware: 6203
-- Boot: UEFI, Secure Boot Off/OtherOS, USB 2.0 Flash
-- PS/2 Keyboard: Partial
-- PS/2 Mouse: Broken
-```
+|  |  |  |  |  |  |  |  |
 
 ## i686
 
 Computers with a 32 bits Intel/AMD CPU.
-
-### Dell
-
-- **Dell XPS 13 (9350)**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using BIOS
-- Boots to desktop
-- NVMe driver livelocks
-```
-
-### ASUS
-
-- **ASUS Eee PC 900**
-
-```
-Status - Booting
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using BIOS
-- Correct video mode not offered, this is a firmware issue
-- Boots to desktop
-- No ethernet driver
-```
-
-### Lenovo
-
-- **Lenovo IdeaPad Y510P**
-
-```
-Status - Broken
-Redox version - 0.8.0
-Variant - desktop
-Image date - 11-11-2022
-
-- Booted using BIOS
-- Panics on phys_to_virt overflow, probably having invalid mappings for 32-bit
-```
 
 ### Toshiba
 
